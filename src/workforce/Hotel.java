@@ -45,6 +45,16 @@ public class Hotel {
 		 }	
 	 }
 	 
+	 // Method used to clean all the rooms
+	 public void cleanAll() {
+		 // Loop through all the floors and rooms
+		 for (int x = 0; x < rooms.length; x++) {
+			 for (int y = 0; y < rooms[x].length; y++) {
+					 rooms[x][y].isClean = true;
+			 }
+		 }	
+	 }
+	 
 	 // List all the rooms in the hotel
 	 // This method OVERRIDES the default toString() built in to Java
 	 public String toString() {
