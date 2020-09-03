@@ -8,4 +8,9 @@ public class Room {
 	public boolean isClean = true;	// default the room is clean
 	public double sqFt = 450.0;		// e.g. 450.0 (default value)
 	
+	// Override the build in toString method
+	// only prints out a subset of all class attributes
+	public String toString() {
+		return roomNum + "\t\t" + isClean + "\n";
+	}
 }

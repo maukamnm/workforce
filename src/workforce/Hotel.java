@@ -1,8 +1,5 @@
 package workforce;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Hotel {
 	
 	// Class attributes
@@ -66,8 +63,7 @@ public class Hotel {
 		 for (int x = 0; x < rooms.length; x++) {
 			 output += "FLOOR #" + (x + 1) + "\n";
 			 for (int y = 0; y < rooms[x].length; y++) {
-				 output += rooms[x][y].roomNum + "\t\t";
-				 output += rooms[x][y].isClean + "\n";
+				 output += rooms[x][y];
 			 }
 		 }	
 		 // Don't print here, send all entire String back to where it was called
