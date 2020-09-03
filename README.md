@@ -8,7 +8,7 @@ This program and code can be used to grow your programming experience.  The code
 
 For a list of possible enhancements, scroll down to "Possible Enhancements."
 
-![Image of battle application](battle-screenshot.png)
+![Image of workforce application](workforce-screenshot.png)
 
 ## Concepts
 - Static methods
