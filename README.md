@@ -72,15 +72,27 @@ For a list of possible enhancements, scroll down to "Possible Enhancements."
 ## Possible Enhancements
 
 ### Basic
+- Fix the potential problem that the user does not enter an int for the menu
+- Add a menu option to create one Housekeeper. You can hard code the name and salary
+- Allow the user to enter the hotel name and the number of floor and rooms per floor
+- Display a message if the user enters any int other than 0-3.
 - _More coming soon! (submit your suggestions)
 
 ### Medium 
+- Use a HouseKeeper class object to clean the rooms and calculate how many hours it took and how much the housekeeper earned
+- Allow the user to name and enter the housekeeper information.
+- Change all public methods that should be private to private and fix any potential errors
+- Create a constructor for Room so that your assign a room to the multi dimension array on one-line
 - _More coming soon! (submit your suggestions)
 
 ### Hard
+- Create an Arraylist of HouseKeepers and see how many housekeepers are needed to clear all the rooms in eight hours
+- Create a report of all housekeepers and their pay for the day based on hours needed to clean rooms
 - _More coming soon! (submit your suggestions)
 
 ### Expert
+- Create a program that uses the housekeepers most efficiently from a cost perspective to clean the rooms
+- Create a Guest class and put guests in a room, when the guest leaves it is dirty and needs to be cleaned
 - _More coming soon! (submit your suggestions)
 
 ## For more information on GCU's Java Certificate
