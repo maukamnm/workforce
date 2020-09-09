@@ -1,5 +1,6 @@
 package workforce;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Start {
@@ -37,9 +38,14 @@ public class Start {
 			System.out.println("Which Option? ");
 			// Allow the user to enter a number.
 			// What happens if they enter a letter?
-			int choice = sc.nextInt();
-			sc.nextLine();
-
+			int choice = 0;
+			try{
+				choice = sc.nextInt();
+			}
+			catch(InputMismatchException e) {
+				System.out.println("Try again!");
+				main(null);
+			}
 			// Pick the option from the switch statement
 			switch(choice) {
 			// if choice == 0
