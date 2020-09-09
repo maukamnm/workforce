@@ -4,13 +4,14 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Start {
-
+	
+		
 	public static void main(String[] args) {
 
-		// Create a new Hotel and pass in needed constructor parameter
+// Create a new Hotel and pass in needed constructor parameter
 		// (floors,room/floor, name)
 		Hotel myHotel = new Hotel(4, 8, "GCU Inn");
-
+		
 		// Starts the hotel operations by passing hotel object
 		operateHotel(myHotel);
 	}
@@ -44,7 +45,7 @@ public class Start {
 			}
 			catch(InputMismatchException e) {
 				System.out.println("Try again!");
-				main(null);
+				operateHotel(hotel);
 			}
 			// Pick the option from the switch statement
 			switch(choice) {
