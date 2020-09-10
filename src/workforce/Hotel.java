@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Hotel {
 	
-	//Munoz: empty constructor
+	//Munoz: no arg constructor
 	public Hotel(){
 
 	}
