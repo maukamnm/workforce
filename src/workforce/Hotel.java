@@ -1,11 +1,17 @@
 package workforce;
 
+import java.util.Scanner;
+
 public class Hotel {
+	
+	//Munoz: empty constructor
+	public Hotel(){
+
+	}
 	
 	// Class attributes
 	 private String name;		// e.g. Grand Hotel
 	 private Room [][] rooms;	// MultiDimensional array of rooms by floor
-	 
 	 // Constructor that creates a hotel and rooms
 	 public Hotel (int numFloors, int numRooms, String name) {
 		 
@@ -51,6 +57,7 @@ public class Hotel {
 			 }
 		 }	
 	 }
+	 
 	 
 	 // List all the rooms in the hotel
 	 // This method OVERRIDES the default toString() built in to Java
