@@ -1,9 +1,12 @@
 package workforce;
 
+import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Hotel {
-	
+	//Munoz
+	static Scanner sc = new Scanner(System.in);
 	//Munoz: no arg constructor
 	public Hotel(){
 
@@ -77,6 +80,5 @@ public class Hotel {
 		 return output;
 		 
 	 }
-	 
-
+		
 }

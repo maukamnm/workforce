@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 public class Start {
 
+	// Munoz added scanner and arraylist
+	static ArrayList<HouseKeeper> housekeepers = new ArrayList<>();
 	static Scanner sc = new Scanner(System.in);
 	static ArrayList<Hotel> hotels = new ArrayList<>();
 
@@ -40,6 +42,8 @@ public class Start {
 			System.out.println("3. Clean all rooms");
 			// Munoz: Basic enhancement 3
 			System.out.println("4. Enter new Hotel");
+			System.out.println("5. Enter new Hotel Staff (Housekeeper)");
+			System.out.println("6. Review all Housekeepers");
 			System.out.println("======================");
 			System.out.println("Which Option? ");
 			// Allow the user to enter a number.
@@ -74,8 +78,19 @@ public class Start {
 				hotel.cleanAll();
 				break;
 			case 4:
-				// clean all rooms
+				// create hotel
 				createHotel();
+				break;
+			case 5:
+				// create staff
+				String name = null;
+				double wage = 0;
+				int speed = 0;
+				createStaff();
+				break;
+			case 6:
+				// print out housekeepers
+				reviewStaff();
 				break;
 			// there is no default case as the loop will repeat anyway
 			}
@@ -101,4 +116,25 @@ public class Start {
 		}
 	}
 
+	public static void createStaff() {
+		try {
+		System.out.println("Enter Housekeepers name:");
+		String name = sc.nextLine();
+		System.out.println("Enter Housekeepers wage per hour:");
+		double wage = sc.nextDouble();
+		System.out.println("Enter Housekeepers speed of rooms per hour:");
+		int speed = sc.nextInt();
+		housekeepers.add(new HouseKeeper(name, wage, speed));
+		}
+
+		catch (InputMismatchException e) {
+			System.out.println("Whoops! Try again..");
+			createStaff();
+		}
+	}
+	public static void reviewStaff() {
+		for(int i = 0; i<housekeepers.size(); i++) {
+			System.out.println((i+1) + ": " + housekeepers.get(i));
+		}
+	}
 }
