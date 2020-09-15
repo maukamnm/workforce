@@ -22,7 +22,7 @@ public class HouseKeeper {
 
 	@Override
 	public String toString() {
-		return "HouseKeeper [name=" + name + ", payPerHour=" + payPerHour + ", roomsPerHour=" + roomsPerHour + "]";
+		return "HouseKeeper's name: " + name + ", payPerHour: " + payPerHour + ", roomsPerHour: " + roomsPerHour;
 	}
 
 }
