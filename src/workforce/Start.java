@@ -1,5 +1,13 @@
 package workforce;
 
+import java.io.File;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,6 +18,7 @@ public class Start {
 	static ArrayList<HouseKeeper> housekeepers = new ArrayList<>();
 	static Scanner sc = new Scanner(System.in);
 	static ArrayList<Hotel> hotels = new ArrayList<>();
+	static final File file = new File("file.txt");
 
 	public static void main(String[] args) {
 
@@ -136,5 +145,59 @@ public class Start {
 		for(int i = 0; i<housekeepers.size(); i++) {
 			System.out.println((i+1) + ": " + housekeepers.get(i));
 		}
+	}
+	
+	public static void read() {
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(file));
+			String line;
+			while ((line = reader.readLine()) != null) {
+				String [] part = line.split("\\|");
+				//
+				switch (part[0]) {
+				case "HouseKeeper":
+					System.out.println("HouseKeeper:");
+// Add HouseKeeper class object arr list
+					break;
+				case "Hotel":
+					System.out.println(part[0]);
+// Add Hotel class object arr list
+					break;
+				default:
+					System.out.println("Class not found");
+				}
+			}
+			reader.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}System.out.println("Size = "); //add size of arr lists in two stmts for each
+	}
+	//storing contacts which will be used in write
+	private static void storeContactObject(FileWriter wr) {
+		try {
+			storeInfo();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void write() {
+		try {
+			FileWriter wr = new FileWriter(file, false);
+			storeContactObject(wr);
+			wr.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	//throwing exceptions in case any problem occurs. 
+	//storing contacts by running through the array with a for each loop 
+	//depending on bus or pers it will tell us "writing "BLANK" contacts to file"
+	private static void storeInfo() throws IOException {
+		FileWriter wr = new FileWriter(file, false);
+		System.out.println("writing/storing info to text file...");
+		//for loops, if HK or Hotel
+		wr.close();
 	}
 }
